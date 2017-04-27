@@ -1,6 +1,7 @@
 import lib.interpolate as itp
 import googlemaps
 import pandas as pd
+import numpy as np
 from datetime import datetime
 
 gmaps = googlemaps.Client(key='AIzaSyD3sNjKSAqK_7eBo8FNRbyapjUODTXnh_M')
@@ -22,6 +23,8 @@ for idx, pt in enumerate(waypoints):
         points.loc[idx] = [idx + 1, "Bagalkot", pt[0], pt[1]]
     else:
         points.loc[idx] = [idx + 1, "", pt[0], pt[1]]
+
+np.array_split(points[0:len(points)-1], 100)
 
 rdPoints = pd.DataFrame(columns = ["Id", "Name", "Lat", "Lng"])
 
