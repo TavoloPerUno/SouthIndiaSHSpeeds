@@ -4,8 +4,7 @@ import lib.interpolate as itp
 import pandas as pd
 import os
 import math
-
-gmaps = googlemaps.Client(key='AIzaSyCwgy0Dy1fXaR7bhmi6-h6qA4zTCsEdnK4')
+gmaps = googlemaps.Client(key='AIzaSyAPHp1f7OrbiYRHuNIPO9NjOEYB78mVVr4')
 
 def getWaypointsFromGPX(gpxFile):
     gpx_file = open(gpxFile, 'r')
